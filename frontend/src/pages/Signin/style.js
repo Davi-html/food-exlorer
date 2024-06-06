@@ -5,6 +5,14 @@ export const Container = styled.div`
   padding: 50px 25px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+
+  a {
+    text-align: center;
+    color: ${({theme: {color}}) => color.light100};
+    text-decoration: none;
+    cursor: pointer;
+  }
 
   .title{
     display: flex;
@@ -20,7 +28,7 @@ export const Container = styled.div`
   }
 
   .form {
-    height: 100%;
+    height: 48%;
     margin-top: 50px;
     display: flex;
     align-items: center;

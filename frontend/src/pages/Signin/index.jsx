@@ -1,6 +1,8 @@
 import { Container } from "./style";
 import { ThemeProvider } from "styled-components";
 import { theme } from "../../Theme";
+import { Link } from "react-router-dom";
+
 
 import logo from "../../assets/page-login.png";
 
@@ -24,6 +26,7 @@ export function Signin() {
             <Button title={'Entrar'}/>
           </form>
         </div>
+        <Link to={'/signup'}>Criar uma conta</Link>
       </Container>
     </ThemeProvider>
   );
