@@ -21,5 +21,7 @@ export const theme = {
     dark800: "#0D161B",
     dark900: "#0D1D25",
     dark1000: "#192227",
+  
+    tomato100: "#750310",
   },
 };

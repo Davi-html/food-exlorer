@@ -30,12 +30,26 @@ export const Container = styled.div`
     form{
       color: ${({theme: {color}}) => color.light400} ;
       
-
       height: 100%;
       width: 100%;
+  
       display: flex;
       flex-direction: column;
+      gap: 5px;
 
+      input {
+        margin-bottom: 20px;
+        height: 48px;
+        width: 100%;
+        border-radius: 10px;
+        padding: 12px 14px;
+        outline: none;
+        border: none;
+
+        color: ${({theme: {color}}) => color.light500};
+
+        background: ${({theme: {color}}) => color.dark900};
+      }
     }
   } 
 `
