@@ -1,0 +1,16 @@
+<%- include('includes/head') %>
+<div class="title flex justify-center items-center gap-3 text-2xl">
+  <img src="/login.png" alt="teste" >
+  <h2 class="font-bold">food explorer</h2>
+</div>
+
+<div className="form">
+  <form action="login/register" method="post">
+    <label htmlFor="email">Email</label>
+    <input type="email" name="email" id="email" placeholder="exemplo@exemplo.com.br"/>
+    <label htmlFor="senha">Senha</label>
+    <input type="password" name="password" id="password" placeholder="No mínimo 6 caracteres" maxLength={6}/>
+    <button type="submit">Entrar</button>
+  </form>
+</div>
+<%- include('includes/footer') %>

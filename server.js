@@ -9,14 +9,20 @@ mongoose.connect(process.env.CONNECTIONSTRING)
         server.emit('pronto')
     })
     .catch(e => console.error(e))
-
-const session = require('express-session')
-const MongoStore = require('connect-mongo')(session)
-
-const PORT = 3001
-
+    
+    const session = require('express-session')
+    const MongoStore = require('connect-mongo')(session)
+    
+    const PORT = 3001
+    const path = require('path')
+    
 server.use(express.urlencoded({ extended: true }))
 server.use(express.json())
+server.use(express.static('public'));
+
+server.set('views', path.resolve(__dirname, 'src', 'views'))
+server.set('view engine', 'ejs')
+
 
 const sessionOptions = session({
     secret: process.env.SECRETMONGO,
@@ -29,7 +35,6 @@ const sessionOptions = session({
     }
 })
 server.use(sessionOptions)
-
 server.use(routes)
 
 server.on('pronto', ()=>{
