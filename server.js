@@ -44,6 +44,6 @@ server.use(routes)
 server.on('pronto', ()=>{
     server.listen(PORT, ()=>{
         console.log(`Server executando na porta ${PORT}`)
-        console.log(`Acessar http://localhost:${PORT}/login/signin`)
+        console.log(`Acessar http://localhost:${PORT}/`)
     })
 })

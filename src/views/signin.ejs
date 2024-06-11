@@ -7,13 +7,13 @@
 <%- include('includes/messages') %>
 
 <div class="form h-auto mt-16 px-10 flex flex-col justify-center">
-  <form action="/login/register" method="post" class="flex flex-col">
+  <form action="/login/login" method="post" class="flex flex-col">
     <label htmlFor="email">Email</label>
     <input type="email" name="email" id="email" class="input-login bg-dark900" placeholder="exemplo@exemplo.com.br"/>
     <label htmlFor="senha">Senha</label>
     <input type="password" name="password" id="password" class="input-login bg-dark900" placeholder="No mínimo 6 caracteres"  minlength="6" maxlength="50"/>
     <button type="submit" class="bg-tomato100 h-10 rounded-xl mt-3">Entrar</button>
   </form>
-  <a href="/login/signup" target="_blank" rel="noopener noreferrer">Criar uma conta</a>
+  <a href="/signup" rel="noopener noreferrer">Criar uma conta</a>
 </div>
 <%- include('includes/footer') %>
