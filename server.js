@@ -4,6 +4,8 @@ const express = require('express')
 const server = express()
 const routes = require('./routes')
 const mongoose = require('mongoose')
+const flash = require('connect-flash')
+const { middlewareGlobal} = require('./src/middlewares/middleware')
 mongoose.connect(process.env.CONNECTIONSTRING)
     .then(()=> {
         server.emit('pronto')
@@ -23,7 +25,6 @@ server.use(express.static('public'));
 server.set('views', path.resolve(__dirname, 'src', 'views'))
 server.set('view engine', 'ejs')
 
-
 const sessionOptions = session({
     secret: process.env.SECRETMONGO,
     store: new MongoStore({mongooseConnection: mongoose.connection}),
@@ -34,12 +35,15 @@ const sessionOptions = session({
         httpOnly: true
     }
 })
+server.use(flash())
 server.use(sessionOptions)
+
+server.use(middlewareGlobal)
 server.use(routes)
 
 server.on('pronto', ()=>{
     server.listen(PORT, ()=>{
         console.log(`Server executando na porta ${PORT}`)
-        console.log(`Acessar http://localhost:${PORT}`)
+        console.log(`Acessar http://localhost:${PORT}/login/signin`)
     })
 })
