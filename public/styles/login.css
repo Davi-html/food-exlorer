@@ -11,3 +11,27 @@ a {
   margin-top: 25px;
   cursor: pointer;
 }
+
+.form h1 {
+  display: none;
+}
+
+@media(width > 914px){
+  .container-login{
+    display: flex;
+    justify-content: space-around;
+    background-color: #000A0F;
+  }
+
+  .form {
+    background-color: #001119;
+    width: 40%;
+    padding: 50px;
+    border-radius: 16px;
+    
+    h1 {
+      display: inline;
+    }
+  }
+}
+

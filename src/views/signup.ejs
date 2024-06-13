@@ -1,21 +1,46 @@
 <%- include('includes/head') %>
-<div class="title flex justify-center items-center gap-3 text-2xl mt-20">
-  <img src="/login.png" alt="teste" >
-  <h2 class="font-bold">food explorer</h2>
-</div>
+<div class="container-login">
+  <div class="title flex justify-center items-center gap-3 text-2xl mt-20">
+    <img src="/login.png" alt="teste" />
+    <h2 class="font-bold">food explorer</h2>
+  </div>
 
-<%- include('includes/messages') %>
+  <%- include('includes/messages') %>
 
-<div class="form h-auto mt-16 px-10 flex flex-col justify-center">
-  <form action="/login/register" method="post" class="flex flex-col">
-    <label htmlFor="name">Nome</label>
-    <input type="text" name="name" id="name" class="input-login bg-dark900" placeholder="Exemplo: Maria da Silva"/>
-    <label htmlFor="email">Email</label>
-    <input type="email" name="email" id="email" class="input-login bg-dark900" placeholder="exemplo@exemplo.com.br"/>
-    <label htmlFor="senha">Senha</label>
-    <input type="password" name="password" id="password" class="input-login bg-dark900" placeholder="No mínimo 6 caracteres"  minlength="6" maxlength="50"/>
-    <button type="submit" class="bg-tomato100 h-10 rounded-xl mt-3">Criar conta</button>
-  </form>
-  <a href="/" rel="noopener noreferrer">Já tenho uma conta</a>
+  <div class="form h-auto mt-16 px-10 flex flex-col justify-center">
+    <h1 class="text-3xl text-center py-4">Crie sa conta</h1>
+    <form action="/login/register" method="post" class="flex flex-col">
+      <label htmlFor="name">Nome</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="input-login bg-dark900"
+        placeholder="Exemplo: Maria da Silva"
+      />
+      <label htmlFor="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="input-login bg-dark900"
+        placeholder="exemplo@exemplo.com.br"
+      />
+      <label htmlFor="senha">Senha</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        class="input-login bg-dark900"
+        placeholder="No mínimo 6 caracteres"
+        minlength="6"
+        maxlength="50"
+      />
+      <button type="submit" class="bg-tomato100 h-10 rounded-xl mt-3">
+        Criar conta
+      </button>
+    </form>
+    <a href="/" rel="noopener noreferrer">Já tenho uma conta</a>
+  </div>
 </div>
 <%- include('includes/footer') %>
