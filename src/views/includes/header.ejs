@@ -1,8 +1,18 @@
 
-<header class="h-28 bg-dark700">
-  <i class="fa-solid fa-bars fa-3x hamburguer" onclick="show()"></i>
-  <i class="fa-solid fa-x fa-3x x" onclick="fechar()"></i>
+<header class="h-28 bg-dark700 flex items-end pb-4 px-8 justify-between">
+  <i class="fa-solid fa-bars fa-2x hamburguer" onclick="show()"></i>
+  <i class="fa-solid fa-x fa-2x x" onclick="fechar()"></i>
+  <h1 class="flex items-center gap-3 title"> <img src="/login.png" class="w-6"> food explore</h1>
+  <h1 class="text-menu">Menu</h1>
+  <img src="/cart.png" class="cart">
   <div class="menu">
-    <a href="/login/logout">Sair</a>
+    <div class="div-search bg-dark900 w-full">
+      <label for="search">
+        <i class="fa-solid fa-magnifying-glass pl-4"></i>
+      </label>
+      <input type="text" name="search" id="search" class="bg-dark900 input-header" placeholder="Busque por pratos ou ingredientes"/>
+    </div>
+    <a href="/login/logout" class="mb-3 text-light300 text-2xl">Sair</a>
+    <hr class="w-full text-light500">
   </div>
 </header>
